@@ -1,0 +1,74 @@
+﻿<Window x:Class="Course_work_doc_lib.RegWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Course_work_doc_lib"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="444.2" Width="800" WindowStyle="None" ResizeMode="NoResize" WindowState="Maximized" WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <Style x:Name="Button_Style" TargetType="Button">
+            <Setter Property="Content" Value=""></Setter>
+            <Setter Property="Background" Value="Aqua"></Setter>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="Res/conifers-1836582_1920.jpg"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid Margin="190,55,190,49.4" Grid.ColumnSpan="2" Grid.RowSpan="2" Height="340" VerticalAlignment="Center" HorizontalAlignment="Center" Width="420" Panel.ZIndex="10">
+            <Grid.Background>
+                <SolidColorBrush Color="#FF04202C" Opacity="0.5"/>
+            </Grid.Background>
+            <Grid.Effect>
+                <DropShadowEffect BlurRadius="50"/>
+            </Grid.Effect>
+            <TextBlock Margin="10,19,10,0" TextWrapping="Wrap" Text="Регистрация" VerticalAlignment="Top" TextAlignment="Center" FontFamily="Microsoft YaHei UI Light" FontSize="36" Foreground="#FFC9D1C8"/>
+            <Grid Height="65" VerticalAlignment="Bottom">
+                <Button x:Name="Button_Reg" Width="90" BorderBrush="#FFC9D1C8" Foreground="#FFC9D1C8" Background="#FF04202C" Content="OK" FontFamily="Microsoft YaHei UI Light" FontSize="24" Canvas.Left="10" Canvas.Top="5" Margin="0,0,21,20" HorizontalAlignment="Right" Click="Click_OK">
+                    <Button.Effect>
+                        <BlurEffect Radius="3" RenderingBias="Quality"/>
+                    </Button.Effect>
+                    <Button.OpacityMask>
+                        <ImageBrush ImageSource="Res/Mask_Button.png"/>
+                    </Button.OpacityMask>
+                </Button>
+            </Grid>
+            <TextBox x:Name="TextBox_Login" Height="32" Margin="50,140,50,0" TextWrapping="Wrap" VerticalAlignment="Top" BorderBrush="#FFC9D1C8" Foreground="#FFC9D1C8" FontSize="18" SelectionBrush="#FFB9E0FF">
+                <TextBox.Background>
+                    <SolidColorBrush Color="#FF04202C" Opacity="0.8"/>
+                </TextBox.Background>
+            </TextBox>
+            <PasswordBox x:Name="TextBox_Password" Height="32" Margin="50,216,50,0" VerticalAlignment="Top" BorderBrush="#FFC9D1C8" Foreground="#FFC9D1C8" FontSize="18" SelectionBrush="#FFB9E0FF">
+                <PasswordBox.Background>
+                    <SolidColorBrush Color="#FF04202C" Opacity="0.8"/>
+                </PasswordBox.Background>
+            </PasswordBox>
+            <Rectangle Fill="#FF04202C" Height="1" Margin="50,83,50,0" RadiusY="1" RadiusX="1" Stroke="#FFC9D1C8" VerticalAlignment="Top"/>
+            <TextBlock Margin="50,105,10,0" TextWrapping="Wrap" Text="Введите логин:" VerticalAlignment="Top" FontFamily="Microsoft YaHei UI Light" FontSize="24" Foreground="#FFC9D1C8"/>
+            <TextBlock Margin="50,181,10,0" TextWrapping="Wrap" Text="Введите пароль:" VerticalAlignment="Top" FontFamily="Microsoft YaHei UI Light" FontSize="24" Foreground="#FFC9D1C8"/>
+        </Grid>
+        <Button BorderBrush="#FFC9D1C8" Foreground="#FFC9D1C8" Background="#FF04202C" Content="X" FontFamily="Microsoft YaHei UI Light" Margin="0,10,10,0" Grid.Column="1" FontWeight="Bold" Height="20" VerticalAlignment="Top" HorizontalAlignment="Right" Width="20" Click="Click_Close">
+            <Button.Effect>
+                <BlurEffect Radius="3"/>
+            </Button.Effect>
+        </Button>
+        <Rectangle Margin="299,0,301,22.4" Grid.RowSpan="2" Grid.ColumnSpan="2" Panel.ZIndex="5" Width="200" Height="200" VerticalAlignment="Bottom">
+            <Rectangle.Fill>
+                <SolidColorBrush Color="#FFC9D1C8" Opacity="0.3"/>
+            </Rectangle.Fill>
+            <Rectangle.OpacityMask>
+                <ImageBrush ImageSource="Res/main_logo.png"/>
+            </Rectangle.OpacityMask>
+        </Rectangle>
+
+    </Grid>
+</Window>
